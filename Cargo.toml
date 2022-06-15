@@ -1,0 +1,13 @@
+[package]
+name = "time-tracker-bot"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+teloxide = { version = "0.9", features = ["macros", "auto-send"] }
+sea-orm = {version =  "0.8.0", features = ["runtime-tokio-native-tls", "sqlx-postgres"], default-features = false}
+entities = {path = "./entities"}
+tokio = { version =  "1.8", features = ["rt-multi-thread", "macros"] }
+tokio-util = {version = "0.6", features = ["codec"]}
